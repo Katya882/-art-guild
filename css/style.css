@@ -1,0 +1,392 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, hr, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, button,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.header {
+  background: url("../img/img-header.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh; }
+  .header .header-navigation {
+    display: flex;
+    justify-content: right;
+    padding-top: 40px; }
+    .header .header-navigation a {
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 16px;
+      font-family: "Unbounded";
+      color: #fff;
+      padding-left: 20px; }
+    .header .header-navigation a:hover {
+      color: #FEB701;
+      transition: all 0.5s; }
+  .header .header-title {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding-top: 25%; }
+    .header .header-title h1 {
+      font-family: "Unbounded";
+      font-weight: 600;
+      font-size: 60px;
+      line-height: 78px;
+      max-width: 446px;
+      padding-right: 154px; }
+    .header .header-title p {
+      font-family: "Montserrat";
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+      max-width: 370px; }
+
+.header-no-background {
+  background: none;
+  height: 20vh; }
+  .header-no-background .header-navigation a {
+    color: #0F0243; }
+  .header-no-background .header-navigation a:hover {
+    color: #FEB701;
+    transition: all 0.5s; }
+
+html {
+  overflow-x: hidden; }
+
+body {
+  overflow-x: hidden; }
+
+img {
+  max-width: 100%; }
+
+.main_container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.auction-inform {
+  display: flex;
+  justify-content: space-between;
+  padding: 140px 0 80px; }
+  .auction-inform .auction-inform_name h2 {
+    font-family: "Unbounded";
+    font-weight: 600;
+    font-size: 44px;
+    color: #0F0243;
+    margin-bottom: 94px; }
+  .auction-inform .auction-inform_name .auction-inform_button {
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "Unbounded";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    background: #FEB701;
+    padding: 12px 24px; }
+    .auction-inform .auction-inform_name .auction-inform_button:hover {
+      background: #0F0243;
+      transition: all 0.5s;
+      box-shadow: 0px 15px 20px rgba(125, 142, 201, 0.4); }
+    .auction-inform .auction-inform_name .auction-inform_button:focus {
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.14)), #0F0243; }
+  .auction-inform .auction-inform_table {
+    font-family: "Montserrat";
+    font-size: 18px;
+    border: 0.5px solid #1E285A;
+    min-width: 570px;
+    padding: 32px;
+    box-sizing: border-box; }
+    .auction-inform .auction-inform_table table {
+      width: 100%; }
+      .auction-inform .auction-inform_table table tr td {
+        width: 50%;
+        color: #1E285A;
+        padding: 8px 0; }
+        .auction-inform .auction-inform_table table tr td:first-child {
+          color: #0F0243;
+          font-weight: bold; }
+
+.lot-unit .lot {
+  width: 42%; }
+.lot-unit h3 {
+  font-family: "Unbounded";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  color: #0F0243;
+  margin-bottom: 60px; }
+.lot-unit .results-text {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #1E285A;
+  max-width: 570px;
+  text-align: left; }
+  .lot-unit .results-text .author {
+    padding-top: 44px; }
+    .lot-unit .results-text .author strong {
+      font-weight: 700;
+      padding-right: 30px; }
+
+.slider-lot {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  min-width: 1170px;
+  cursor: pointer; }
+  .slider-lot .image-size {
+    padding: 0 15px; }
+  .slider-lot .slick-next {
+    width: 70px;
+    left: 500px;
+    bottom: -49px;
+    top: 107%;
+    background: url("../img/icons/arrow_right.svg") center center no-repeat;
+    z-index: 1; }
+    .slider-lot .slick-next:before {
+      content: none; }
+  .slider-lot .slick-prev {
+    width: 32px;
+    left: auto;
+    right: 690px;
+    bottom: -49px;
+    top: 107%;
+    background: url("../img/icons/arrow_left.svg") center center no-repeat;
+    z-index: 1; }
+    .slider-lot .slick-prev:before {
+      content: none; }
+  .slider-lot .slick-dots {
+    bottom: -52px;
+    text-align: left; }
+    .slider-lot .slick-dots li {
+      margin: 0;
+      height: 15px;
+      width: 30px; }
+      .slider-lot .slick-dots li button {
+        height: 1px;
+        width: 30px;
+        padding: 0px;
+        background: rgba(15, 2, 67, 0.47); }
+        .slider-lot .slick-dots li button:before {
+          content: none; }
+      .slider-lot .slick-dots li.slick-active button {
+        background: #0F0243; }
+
+.slider-lot-2 {
+  cursor: pointer; }
+  .slider-lot-2 .image-size {
+    padding: 0 15px; }
+  .slider-lot-2 .slick-next {
+    width: 70px;
+    right: 215px;
+    bottom: -49px;
+    top: 107%;
+    background: url("../img/icons/arrow_right.svg") center center no-repeat;
+    z-index: 1; }
+    .slider-lot-2 .slick-next:before {
+      content: none; }
+  .slider-lot-2 .slick-prev {
+    width: 32px;
+    left: auto;
+    right: 310px;
+    bottom: -49px;
+    top: 107%;
+    background: url("../img/icons/arrow_left.svg") center center no-repeat;
+    z-index: 1; }
+    .slider-lot-2 .slick-prev:before {
+      content: none; }
+  .slider-lot-2 .slick-dots {
+    bottom: -52px;
+    text-align: center; }
+    .slider-lot-2 .slick-dots li {
+      margin: 0;
+      height: 15px;
+      width: 30px; }
+      .slider-lot-2 .slick-dots li button {
+        height: 1px;
+        width: 30px;
+        padding: 0px;
+        background: rgba(15, 2, 67, 0.47); }
+        .slider-lot-2 .slick-dots li button:before {
+          content: none; }
+      .slider-lot-2 .slick-dots li.slick-active button {
+        background: #0F0243; }
+
+.lot-unit {
+  position: relative; }
+  .lot-unit .slider-block {
+    position: absolute;
+    max-width: 900px;
+    left: 50%;
+    top: 0;
+    margin-bottom: 500px; }
+
+.unit-margin-top {
+  margin-top: 500px; }
+
+.results {
+  margin-top: 140px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: space-between; }
+
+h2 {
+  font-family: "Unbounded";
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 123%;
+  color: #0F0243; }
+
+.results-text {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #1E285A;
+  max-width: 570px;
+  text-align: left; }
+
+.result-link {
+  text-decoration: none;
+  cursor: pointer;
+  color: #0F0243; }
+  .result-link:hover {
+    color: #FEB701; }
+
+.result-button {
+  text-decoration: none;
+  color: #0F0243;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-top: 24px; }
+  .result-button svg {
+    padding-left: 5px; }
+  .result-button:hover {
+    color: #FEB701; }
+    .result-button:hover svg path {
+      fill: #FEB701; }
+
+.our-team {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 140px 0 140px; }
+  .our-team .team-description {
+    width: 50%;
+    padding-right: 15px;
+    box-sizing: border-box; }
+    .our-team .team-description .title {
+      font-family: "Unbounded";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 44px;
+      color: #0F0243; }
+    .our-team .team-description .description {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #1E285A;
+      margin-top: 65px; }
+  .our-team .team-card {
+    width: 25%;
+    padding: 0 15px;
+    box-sizing: border-box; }
+    .our-team .team-card .team-name {
+      font-family: "Unbounded";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      text-align: center;
+      color: #0F0243;
+      margin-top: 28px; }
+    .our-team .team-card .team-position {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      text-align: center;
+      color: #1E285A;
+      margin-top: 12px; }
+    .our-team .team-card .team-social {
+      margin: 24px 0 24px;
+      text-align: center; }
+      .our-team .team-card .team-social a {
+        font-size: 0;
+        padding: 0 8px; }
+        .our-team .team-card .team-social a:hover svg path {
+          fill: #FEB701; }
+      .our-team .team-card .team-social svg {
+        height: 32px;
+        width: 32px; }
+
+.pre-footer-line {
+  border: none;
+  background-color: #1E285A;
+  color: #1E285A;
+  height: 0.5px;
+  margin-bottom: 60px; }
+
+.footer-text {
+  font-family: "Unbounded";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #0F0243;
+  margin-bottom: 60px; }
+
+.result-margin-top {
+  margin-top: 140px; }
+
+.footer-margin-top {
+  margin-top: 500px; }
+
+.italic-text {
+  font-style: italic; }
+
+/*# sourceMappingURL=style.css.map */
