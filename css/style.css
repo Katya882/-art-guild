@@ -45,10 +45,31 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.header-background {
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden; }
+  .header-background:before {
+    content: "";
+    height: 100%;
+    position: absolute;
+    background: #00000057;
+    top: 0;
+    width: 100%;
+    left: 0; }
+
 .header {
-  background: url("../img/img-header.jpg") no-repeat;
-  background-size: cover;
-  height: 100vh; }
+  background-size: cover; }
+  .header video {
+    min-height: 100vh;
+    width: 100%; }
+  .header .container-absolute {
+    position: absolute;
+    top: 0;
+    margin: auto;
+    max-width: 1200px;
+    right: 0;
+    left: 0; }
   .header .header-navigation {
     display: flex;
     justify-content: right;
@@ -89,7 +110,84 @@ table {
     color: #0F0243; }
   .header-no-background .header-navigation a:hover {
     color: #FEB701;
-    transition: all 0.5s; }
+    transition: all 0.3s; }
+
+.burger-menu-mobile {
+  display: none; }
+
+.burger-button {
+  position: fixed;
+  top: 2vh;
+  right: 2vh;
+  z-index: 9;
+  padding: 8px;
+  cursor: pointer; }
+
+.burger-button span {
+  width: 40px;
+  border: 2px solid #FEB701;
+  background-color: #FEB701;
+  display: block;
+  border-radius: 22px;
+  transition: 1s; }
+
+.burger-button.active span {
+  border-color: #0F0243;
+  background-color: #0F0243; }
+
+.burger-top, .burger-bottom {
+  position: absolute; }
+
+.burger-top {
+  top: -02px; }
+
+.burger-bottom {
+  bottom: -02px; }
+
+.burger-button.active .burger-top {
+  position: absolute;
+  top: 8px;
+  transform: rotateZ(45deg); }
+
+.burger-button.active .burger-middle {
+  border-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0); }
+
+.burger-button.active .burger-bottom {
+  position: absolute;
+  bottom: 8px;
+  transform: rotateZ(-45deg); }
+
+.burger-menu {
+  display: flex;
+  position: absolute;
+  top: 0vh;
+  left: 100vw;
+  right: -100vw;
+  bottom: 0vh;
+  background-color: #fff;
+  padding: 5px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  z-index: 8;
+  transition: 1s;
+  align-content: space-around;
+  justify-content: space-evenly;
+  flex-direction: column; }
+
+.burger-menu.active {
+  left: 50vw;
+  right: 0; }
+
+.burger-menu a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  color: #0F0243;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  display: block;
+  padding: 5px 15px;
+  text-align: center;
+  white-space: nowrap; }
 
 html {
   overflow-x: hidden; }
@@ -102,7 +200,8 @@ img {
 
 .main_container {
   max-width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 15px; }
 
 .auction-inform {
   display: flex;
@@ -266,7 +365,7 @@ img {
     margin-bottom: 500px; }
 
 .unit-margin-top {
-  margin-top: 500px; }
+  margin-top: 450px; }
 
 .results {
   margin-top: 140px;
@@ -388,5 +487,115 @@ h2 {
 
 .italic-text {
   font-style: italic; }
+
+@media (max-width: 1200px) {
+  .header-background {
+    height: 100%;
+    position: relative; }
+
+  .header video {
+    min-height: inherit; }
+  .header .header-navigation {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .header .header-title {
+    padding-left: 2.5rem; }
+
+  .unit-margin-top {
+    margin-top: 350px; } }
+@media (max-width: 768px) {
+  .header .header-title h1 {
+    font-size: 48px;
+    line-height: 72px;
+    padding-right: 150px; }
+  .header .header-title p {
+    font-size: 18px;
+    line-height: 32px; }
+
+  .auction-inform {
+    display: inline-block;
+    padding: 80px 0 80px;
+    text-align: center;
+    width: 100%; }
+    .auction-inform h2 {
+      margin-bottom: 70px; }
+    .auction-inform .auction-inform_table {
+      margin-top: 70px;
+      padding: 15px; }
+    .auction-inform .auction-inform_name .auction-inform_button {
+      font-size: 20px;
+      padding: 14px 26px; }
+
+  .results {
+    display: inline-block; }
+    .results h2 {
+      margin-bottom: 60px; }
+    .results .results-text {
+      max-width: inherit; }
+
+  .team-name {
+    font-size: 15px; }
+
+  .team-position {
+    font-size: 14px; }
+
+  .lot-unit .lot {
+    width: 100%;
+    margin-bottom: 30px; }
+
+  .slider-lot {
+    position: static; }
+
+  .unit-margin-top {
+    margin-top: 150px; }
+
+  .footer-margin-top {
+    margin-top: 300px; }
+
+  .slider-lot {
+    position: static;
+    width: 100%;
+    min-width: inherit; }
+
+  .slider-lot .slick-dots {
+    text-align: center; } }
+@media (max-width: 480px) {
+  .burger-menu-mobile {
+    display: block; }
+
+  .header .header-navigation {
+    display: none; }
+
+  .header .header-title {
+    padding-top: 130px;
+    padding-left: 0.5rem; }
+    .header .header-title h1 {
+      font-size: 18px;
+      line-height: 25px;
+      padding-right: 55px; }
+    .header .header-title p {
+      font-size: 14px;
+      line-height: 16px; }
+
+  .auction-inform .auction-inform_table {
+    min-width: initial; }
+
+  .our-team {
+    margin: 120px 0 120px; }
+    .our-team .team-description {
+      width: 100%; }
+    .our-team .team-description .description {
+      margin-bottom: 20px; }
+    .our-team .team-card {
+      width: 50%; }
+
+  .footer-margin-top {
+    margin-top: 120px; }
+
+  .author span {
+    display: block; }
+
+  .result-margin-top {
+    margin-top: 30px; } }
 
 /*# sourceMappingURL=style.css.map */
